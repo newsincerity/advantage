@@ -3,10 +3,8 @@ package ru.shindei.advantage.app.main
 import android.os.Bundle
 import androidx.activity.*
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
+import androidx.compose.material3.*
+import ru.shindei.advantage.ui.roll.RollScreen
 
 class MainActivity : ComponentActivity() {
 
@@ -15,14 +13,9 @@ class MainActivity : ComponentActivity() {
 		enableEdgeToEdge()
 		setContent {
 			MainTheme {
-				Scaffold(
-					modifier = Modifier.fillMaxSize(),
-					content = { contentPadding ->
-						LazyColumn(
-							contentPadding = contentPadding,
-							content = { },
-						)
-					},
+				Surface(
+					color = MaterialTheme.colorScheme.background,
+					content = { RollScreen() },
 				)
 			}
 		}

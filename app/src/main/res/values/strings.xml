@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Advantage</string>
+	<string name="button_ok">OK</string>
+	<string name="dice_d0">%1$d</string>
+	<string name="dice_d00">%1$02d</string>
+	<string name="dice_d100">= %1$d</string>
+	<string name="hint_fab_roll">Roll dice</string>
+	<string name="hint_menu_action">Actions menu</string>
+	<string name="text_about_app">Yet another dice app\n\n“Advantage” v.%1$s\n%2$s@%3$d (%4$s)\n\nartorfleck@gmail.com\nArthur Khazbulatov\nof “New Sincerity”</string>
+	<string name="text_privacy_policy">“Advantage” works offline, without access to local or global networks, without an account, and never collects, processes or shares any user data</string>
+	<string name="title_about_app">About app</string>
+	<string name="title_app_name">Advantage</string>
+	<string name="title_d100">d%</string>
+	<string name="title_privacy_policy">Privacy policy</string>
 </resources>
