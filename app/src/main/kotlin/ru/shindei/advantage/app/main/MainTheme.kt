@@ -9,7 +9,8 @@ import androidx.compose.ui.platform.LocalContext
 private val defaultDarkColorScheme = darkColorScheme()
 private val defaultLightColorScheme = lightColorScheme()
 
-@Composable fun MainTheme(
+@Composable
+fun MainTheme(
 	darkTheme: Boolean = isSystemInDarkTheme(),
 	dynamicColor: Boolean = true,
 	content: @Composable () -> Unit,

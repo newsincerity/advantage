@@ -1,4 +1,4 @@
-package ru.shindei.advantage.ui.roll
+package ru.shindei.advantage.ui.feature.roll
 
 import androidx.compose.animation.*
 import androidx.compose.animation.AnimatedContentTransitionScope.SlideDirection
@@ -13,13 +13,15 @@ import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import kotlin.random.*
 import ru.shindei.advantage.app.*
 import ru.shindei.advantage.app.R
+import kotlin.random.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RollScreen() {
+fun RollScreen(
+	viewModel: RollScreenViewModel,
+) {
 	var d0 by rememberSaveable { mutableIntStateOf(0) }
 	var d00 by rememberSaveable { mutableIntStateOf(0) }
 	val d100 by remember { derivedStateOf { (d00 + d0).takeIf { it != 0 } ?: 100 } }

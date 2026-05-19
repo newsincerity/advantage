@@ -4,8 +4,9 @@ import android.os.Bundle
 import androidx.activity.*
 import androidx.activity.compose.setContent
 import androidx.compose.material3.*
-import ru.shindei.advantage.ui.roll.RollScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
 			MainTheme {
 				Surface(
 					color = MaterialTheme.colorScheme.background,
-					content = { RollScreen() },
+					content = { MainNav() },
 				)
 			}
 		}
