@@ -1,4 +1,4 @@
-package ru.shindei.advantage.ui.feature.roll
+package roll
 
 import androidx.compose.animation.*
 import androidx.compose.animation.AnimatedContentTransitionScope.SlideDirection
@@ -19,8 +19,8 @@ import kotlin.random.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RollScreen(
-	viewModel: RollScreenViewModel,
+fun Screen(
+	viewModel: ViewModel,
 ) {
 	var d0 by rememberSaveable { mutableIntStateOf(0) }
 	var d00 by rememberSaveable { mutableIntStateOf(0) }

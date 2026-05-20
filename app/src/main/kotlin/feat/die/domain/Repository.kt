@@ -1,9 +1,9 @@
-package ru.shindei.advantage.domain.repository
+package die
 
 import kotlinx.coroutines.flow.Flow
 import ru.shindei.advantage.domain.entity.feature.die.Die
 
-interface DieRepository {
+interface Repository {
 
 	fun flowOfDice(): Flow<List<Die>>
 }

@@ -1,4 +1,4 @@
-package ru.shindei.advantage.app.main
+package main
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -10,7 +10,7 @@ private val defaultDarkColorScheme = darkColorScheme()
 private val defaultLightColorScheme = lightColorScheme()
 
 @Composable
-fun MainTheme(
+fun Theme(
 	darkTheme: Boolean = isSystemInDarkTheme(),
 	dynamicColor: Boolean = true,
 	content: @Composable () -> Unit,
