@@ -1,4 +1,4 @@
-package die
+package dice
 
 import kotlinx.coroutines.flow.Flow
 

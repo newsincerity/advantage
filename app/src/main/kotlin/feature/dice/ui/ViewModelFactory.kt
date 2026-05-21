@@ -1,4 +1,4 @@
-package roll
+package dice
 
 import dagger.assisted.AssistedFactory
 

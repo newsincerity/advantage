@@ -2,9 +2,9 @@ package app
 
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.navigation3.*
+import androidx.compose.material3.adaptive.navigation3.ListDetailSceneStrategy.Companion.detailPane
 import androidx.compose.material3.adaptive.navigation3.ListDetailSceneStrategy.Companion.listPane
-import androidx.compose.runtime.*
-import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.runtime.Composable
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.*
@@ -13,8 +13,8 @@ import androidx.navigation3.ui.NavDisplay
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
 fun Navigation() {
-	val backStack: SnapshotStateList<Any> = remember { mutableStateListOf(roll.ScreenRoute) }
-	val listDetailSceneStrategy: ListDetailSceneStrategy<Any> = rememberListDetailSceneStrategy()
+	val backStack: NavBackStack<NavKey> = rememberNavBackStack(roll.Route, dice.Route)
+	val listDetailSceneStrategy: ListDetailSceneStrategy<NavKey> = rememberListDetailSceneStrategy()
 	NavDisplay(
 		backStack = backStack,
 		onBack = { backStack.removeLastOrNull() },
@@ -24,11 +24,14 @@ fun Navigation() {
 		),
 		sceneStrategies = listOf(listDetailSceneStrategy),
 		entryProvider = entryProvider {
-			entry<roll.ScreenRoute>(metadata = listPane()) { route: roll.ScreenRoute ->
-				roll.Screen(
-					viewModel = hiltViewModel { factory: roll.ViewModelFactory -> factory(route) },
-				)
-			}
+			entry<dice.Route>(metadata = listPane()) { dice.View(
+				viewModel = hiltViewModel { factory: dice.ViewModelFactory -> factory(it) },
+				onBack = {},
+				onNavigate = {},
+			) }
+			entry<roll.Route>(metadata = detailPane()) { roll.View(
+				viewModel = hiltViewModel { factory: roll.ViewModelFactory -> factory(it) },
+			) }
 		},
 	)
 }

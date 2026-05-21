@@ -1,6 +1,7 @@
 package roll
 
+import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
 @Serializable
-data object ScreenRoute
+data object Route : NavKey

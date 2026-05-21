@@ -19,7 +19,7 @@ import kotlin.random.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen(
+fun View(
 	viewModel: ViewModel,
 ) {
 	var d0 by rememberSaveable { mutableIntStateOf(0) }

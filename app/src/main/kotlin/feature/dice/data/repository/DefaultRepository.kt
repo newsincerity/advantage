@@ -1,4 +1,4 @@
-package die
+package dice
 
 import javax.inject.Inject
 import kotlinx.coroutines.flow.*

@@ -1,8 +1,6 @@
-package die
+package dice
 
-import common.Entity
-
-interface Die : Entity {
+interface Die : common.Entity {
 	val colors: DieColors
 	val geometry: DieGeometry
 	val typography: DieTypography

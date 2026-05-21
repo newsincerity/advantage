@@ -1,4 +1,4 @@
-package roll
+package dice
 
 import androidx.lifecycle.ViewModel
 import common.stateInViewModel
@@ -8,8 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 @HiltViewModel(assistedFactory = ViewModelFactory::class)
 class ViewModel @AssistedInject constructor(
 	@Assisted route: Route,
-	diceRepository: dice.Repository,
+	diceRepository: Repository,
 ) : ViewModel() {
 
-	val dice = diceRepository.flowOfDice().stateInViewModel()
+	val dice = diceRepository.flowOfDice()
+		.stateInViewModel(initialValue = emptyList())
 }

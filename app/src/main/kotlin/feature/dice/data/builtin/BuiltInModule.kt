@@ -1,4 +1,4 @@
-package die
+package dice
 
 import dagger.*
 import dagger.hilt.InstallIn

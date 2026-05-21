@@ -1,41 +1,47 @@
-package die
+package dice
 
 class BuiltInDataSource {
 	val dice: List<Die> = listOf(
 		BuiltInDie(
-			id = "d4",
+			key = "d4",
 			colors = BuiltInDieColors.Primary,
 			geometry = BuiltInDieGeometry.D4,
 			typography = BuiltInDieTypography.Default,
 		),
 		BuiltInDie(
-			id = "d6",
+			key = "d6",
 			colors = BuiltInDieColors.Primary,
 			geometry = BuiltInDieGeometry.D6,
 			typography = BuiltInDieTypography.Default,
 		),
 		BuiltInDie(
-			id = "d8",
+			key = "d8",
 			colors = BuiltInDieColors.Primary,
 			geometry = BuiltInDieGeometry.D8,
 			typography = BuiltInDieTypography.Default,
 		),
 		BuiltInDie(
-			id = "d10",
+			key = "d0",
 			colors = BuiltInDieColors.Primary,
-			geometry = BuiltInDieGeometry.D10,
+			geometry = BuiltInDieGeometry.D0,
 			typography = BuiltInDieTypography.Default,
 		),
 		BuiltInDie(
-			id = "d12",
+			key = "d12",
 			colors = BuiltInDieColors.Primary,
 			geometry = BuiltInDieGeometry.D12,
 			typography = BuiltInDieTypography.Default,
 		),
 		BuiltInDie(
-			id = "d20",
+			key = "d20",
 			colors = BuiltInDieColors.Primary,
 			geometry = BuiltInDieGeometry.D20,
+			typography = BuiltInDieTypography.Default,
+		),
+		BuiltInDie(
+			key = "d00",
+			colors = BuiltInDieColors.Primary,
+			geometry = BuiltInDieGeometry.D00,
 			typography = BuiltInDieTypography.Default,
 		),
 	)

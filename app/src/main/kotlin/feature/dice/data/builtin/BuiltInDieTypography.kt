@@ -1,9 +1,9 @@
-package die
+package dice
 
 enum class BuiltInDieTypography(
-	override val id: String,
+	override val key: String,
 	override val format: (Number.() -> String)?,
 ) : DieTypography {
 
-	Default(id = "default", format = null),
+	Default(key = "default", format = null),
 }

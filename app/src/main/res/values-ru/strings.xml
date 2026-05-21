@@ -6,10 +6,12 @@
 	<string name="dice_d100">= %1$d</string>
 	<string name="hint_fab_roll">Бросить кости</string>
 	<string name="hint_menu_action">Меню</string>
-	<string name="text_about_app">Очередное приложение для бросания костей\n\n«Адвантеж» v.%1$s\n%2$s@%3$d (%4$s)\n\nartorfleck@gmail.com\nХазбулатов Артур\n«Новая искренность»</string>
-	<string name="text_privacy_policy">«Адвантеж» работает автономно, без доступа к локальной или глобальной сети, без учетной записи, и ни в коем случае не собирает, не обрабатывает и не передает никакие данные пользователя</string>
+	<string name="hint_nav_back">Назад</string>
+	<string name="text_about_app">Очередное приложение для бросания костей\n\n«Адвантедж» v.%1$s\n%2$s@%3$d (%4$s)\n\nartorfleck@gmail.com\nХазбулатов Артур\n«Новая искренность»</string>
+	<string name="text_privacy_policy">«Адвантедж» работает автономно, без доступа к локальной или глобальной сети, без учетной записи, и ни в коем случае не собирает, не обрабатывает и не передает никакие данные пользователя</string>
 	<string name="title_about_app">О приложении</string>
-	<string name="title_app_name">Адвантеж</string>
+	<string name="title_app_name">Адвантедж</string>
 	<string name="title_d100">d%</string>
+	<string name="title_dice">Кости</string>
 	<string name="title_privacy_policy">Политика конфиденциальности</string>
 </resources>
