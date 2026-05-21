@@ -1,6 +1,6 @@
 package die
 
-enum class MemoryDieTypography(
+enum class BuiltInDieTypography(
 	override val id: String,
 	override val format: (Number.() -> String)?,
 ) : DieTypography {

@@ -7,9 +7,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object MemoryModule {
+object BuiltInModule {
 	@Provides
 	@Singleton
-	fun provideMemoryDataSource(): MemoryDataSource =
-		MemoryDataSource()
+	fun provideMemoryDataSource(): BuiltInDataSource =
+		BuiltInDataSource()
 }

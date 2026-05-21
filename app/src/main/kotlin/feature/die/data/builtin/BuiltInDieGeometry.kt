@@ -1,6 +1,6 @@
 package die
 
-enum class MemoryDieGeometry(
+enum class BuiltInDieGeometry(
 	override val id: String,
 	val range: IntRange,
 ) : DieGeometry {

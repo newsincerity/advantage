@@ -1,6 +1,6 @@
 package die
 
-enum class MemoryDieColors(
+enum class BuiltInDieColors(
 	override val id: String,
 ) : DieColors {
 

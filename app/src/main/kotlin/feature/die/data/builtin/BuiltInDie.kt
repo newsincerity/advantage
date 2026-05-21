@@ -1,6 +1,6 @@
 package die
 
-data class MemoryDie(
+data class BuiltInDie(
 	override val id: String,
 	override val colors: DieColors,
 	override val geometry: DieGeometry,
