@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-	namespace = "ru.shindei.advantage.app"
+	namespace = "app"
 	compileSdk {
 		version = release(37)
 	}
