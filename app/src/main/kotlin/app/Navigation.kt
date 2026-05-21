@@ -24,13 +24,12 @@ fun Navigation() {
 		),
 		sceneStrategies = listOf(listDetailSceneStrategy),
 		entryProvider = entryProvider {
-			entry<dice.Route>(metadata = listPane()) { dice.View(
-				viewModel = hiltViewModel { factory: dice.ViewModelFactory -> factory(it) },
-				onBack = {},
-				onNavigate = {},
+			entry<dice.Route>(metadata = listPane()) { route -> dice.View(
+				viewModel = hiltViewModel { factory: dice.ViewModelFactory -> factory(route) },
+				onNavigate = { route -> },
 			) }
-			entry<roll.Route>(metadata = detailPane()) { roll.View(
-				viewModel = hiltViewModel { factory: roll.ViewModelFactory -> factory(it) },
+			entry<roll.Route>(metadata = detailPane()) { route -> roll.View(
+				viewModel = hiltViewModel { factory: roll.ViewModelFactory -> factory(route) },
 			) }
 		},
 	)
