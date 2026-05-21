@@ -18,7 +18,7 @@ import app.R
 @Composable
 fun View(
 	viewModel: ViewModel,
-	onBack: (() -> Unit)?,
+	onBack: (() -> Unit)? = null,
 	onNavigate: (Any) -> Unit,
 ) {
 	val dice by viewModel.dice.collectAsStateWithLifecycle()
@@ -53,7 +53,7 @@ fun View(
 					items(dice, { it.key }) { die ->
 						ListItem(
 							modifier = Modifier.clickable { onNavigate(roll.Route) },
-							headlineContent = { Text(die.geometry.key) },
+							headlineContent = { Text(die.label) },
 							leadingContent = { Icon(Icons.Outlined.Casino, null) },
 						)
 					}

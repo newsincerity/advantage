@@ -30,6 +30,7 @@ fun Navigation() {
 			) }
 			entry<roll.Route>(metadata = detailPane()) { route -> roll.View(
 				viewModel = hiltViewModel { factory: roll.ViewModelFactory -> factory(route) },
+				onNavigate = { route -> },
 			) }
 		},
 	)

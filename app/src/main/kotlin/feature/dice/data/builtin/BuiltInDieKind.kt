@@ -2,7 +2,7 @@ package dice
 
 enum class BuiltInDieKind(
 	override val label: String,
-	private val roll: () -> Int,
+	override val roll: () -> Int,
 ) : DieKind {
 
 	D4("d4", { (1..4).random() }),
@@ -14,5 +14,4 @@ enum class BuiltInDieKind(
 	D00("d00", { 10 * (0..9).random() });
 
 	override val key: String = name
-	override fun roll(): Int = roll.invoke()
 }

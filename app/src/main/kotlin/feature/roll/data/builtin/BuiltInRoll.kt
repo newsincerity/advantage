@@ -1,6 +1,5 @@
 package roll
 
-import android.R.attr.name
 import dice.*
 
 enum class BuiltInRoll(

@@ -5,6 +5,7 @@ import androidx.compose.animation.AnimatedContentTransitionScope.SlideDirection
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -21,6 +22,8 @@ import kotlin.random.*
 @Composable
 fun View(
 	viewModel: ViewModel,
+	onBack: (() -> Unit)? = null,
+	onNavigate: (Any) -> Unit,
 ) {
 	var d0 by rememberSaveable { mutableIntStateOf(0) }
 	var d00 by rememberSaveable { mutableIntStateOf(0) }
@@ -92,6 +95,12 @@ fun View(
 					actionIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
 					subtitleContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
 				),
+				navigationIcon = {
+					if (onBack != null) IconButton(
+						onClick = onBack,
+						content = { Icon(Icons.AutoMirrored.Outlined.ArrowBack, stringResource(R.string.hint_nav_back)) },
+					)
+				},
 				title = { Text(stringResource(R.string.title_d100)) },
 				actions = {
 
