@@ -1,9 +1,8 @@
-package feature.die.data.memory
+package die
 
 import dagger.*
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import die.MemoryDataSource
 import javax.inject.Singleton
 
 @Module
